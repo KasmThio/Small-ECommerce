@@ -70,7 +70,11 @@ builder.Services.AddAuth(builder.Configuration);
 
 builder.Services.AddSwaggerGen(option =>
 {
-    option.SwaggerDoc("v1", new OpenApiInfo { Title = "Small E Commerce", Version = "v1" });
+    option.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Small E Commerce",
+        Version = "v1"
+    });
     option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
@@ -117,7 +121,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(options =>
     {
-        options.SwaggerEndpoint("/index.html", "Small E-Commerce API v1");
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Small E-Commerce API v1");
         options.RoutePrefix = string.Empty;
     });
 }
