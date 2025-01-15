@@ -1,0 +1,312 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Infrastructure/Small_E_Commerce.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Application/Small_E_Commerce.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Application/Small_E_Commerce.Application.csproj",
+        "projectName": "Small_E_Commerce.Application",
+        "projectPath": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Application/Small_E_Commerce.Application.csproj",
+        "packagesPath": "/Users/kasmtj/.nuget/packages/",
+        "outputPath": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/kasmtj/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Core/Small_E_Commerce.Core.csproj": {
+                "projectPath": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Core/Small_E_Commerce.Core.csproj"
+              },
+              "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Identity/Small_E_Commerce.Identity.csproj": {
+                "projectPath": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Identity/Small_E_Commerce.Identity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[33.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Core/Small_E_Commerce.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Core/Small_E_Commerce.Core.csproj",
+        "projectName": "Small_E_Commerce.Core",
+        "projectPath": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Core/Small_E_Commerce.Core.csproj",
+        "packagesPath": "/Users/kasmtj/.nuget/packages/",
+        "outputPath": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/kasmtj/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dawn.Guard": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Identity/Small_E_Commerce.Identity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Identity/Small_E_Commerce.Identity.csproj",
+        "projectName": "Small_E_Commerce.Identity",
+        "projectPath": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Identity/Small_E_Commerce.Identity.csproj",
+        "packagesPath": "/Users/kasmtj/.nuget/packages/",
+        "outputPath": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Identity/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/kasmtj/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Core/Small_E_Commerce.Core.csproj": {
+                "projectPath": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Core/Small_E_Commerce.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Infrastructure/Small_E_Commerce.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Infrastructure/Small_E_Commerce.Infrastructure.csproj",
+        "projectName": "Small_E_Commerce.Infrastructure",
+        "projectPath": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Infrastructure/Small_E_Commerce.Infrastructure.csproj",
+        "packagesPath": "/Users/kasmtj/.nuget/packages/",
+        "outputPath": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/kasmtj/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Application/Small_E_Commerce.Application.csproj": {
+                "projectPath": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Application/Small_E_Commerce.Application.csproj"
+              },
+              "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Core/Small_E_Commerce.Core.csproj": {
+                "projectPath": "/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Core/Small_E_Commerce.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+name: ECS Auto Deployment
+
+on:
+  push:
+    branches:
+      - "develop"
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  build-and-push-image:
+    name: Build and Push Docker Image to ECR
+    runs-on: ubuntu-latest
+    outputs:
+      IMAGE_URL: ${{ steps.push-to-ecr.outputs.image }}
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+          mask-aws-account-id: false
+
+      - name: ECR Login
+        id: ecr-login
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Generate Image Tag
+        id: tag-image
+        run: |
+          if [[ ${{ github.ref }} =~ refs/tags/* ]]; then
+            echo "tag=my-app-${{ github.ref_name }}" >> $GITHUB_OUTPUT
+          else
+            echo "tag=my-app-$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+          fi
+        shell: bash
+
+      - name: Build, Tag, and Push Docker Image
+        id: push-to-ecr
+        env:
+          ECR_REGISTRY: ${{ steps.ecr-login.outputs.registry }}
+          IMAGE_TAG: ${{ steps.tag-image.outputs.tag }}
+        run: |
+          echo "Pushing image with tag: $IMAGE_TAG"
+          docker build -t ${{ secrets.ECR_REPO_NAME }}:$IMAGE_TAG .
+          docker push ${{ secrets.ECR_REPO_NAME }}:$IMAGE_TAG
+          echo "image=${{ secrets.ECR_REPO_NAME }}:$IMAGE_TAG" >> "$GITHUB_OUTPUT"
+
+  deploy-to-ecs:
+    name: Deploy to ECS Service
+    runs-on: ubuntu-latest
+    needs: build-and-push-image
+    if: github.ref == 'refs/heads/main'
+    env:
+      IMAGE_URI: ${{ needs.build-and-push-image.outputs.IMAGE_URL }}
+
+    steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Download ECS Task Definition
+        run: |
+          aws ecs describe-task-definition --task-definition ${{ secrets.ECS_TASK_DEF }} \
+          --query taskDefinition > ecs-task-def.json
+
+      - name: Update Task Definition with New Image
+        id: update-task-def
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: ecs-task-def.json
+          container-name: ${{ secrets.CONTAINER_NAME }}
+          image: ${{ env.IMAGE_URI }}
+
+      - name: Deploy to ECS
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v2
+        with:
+          task-definition: ${{ steps.update-task-def.outputs.task-definition }}
+          service: ${{ secrets.ECS_SERVICE }}
+          cluster: ${{ secrets.ECS_CLUSTER }}
+          wait-for-service-stability: true

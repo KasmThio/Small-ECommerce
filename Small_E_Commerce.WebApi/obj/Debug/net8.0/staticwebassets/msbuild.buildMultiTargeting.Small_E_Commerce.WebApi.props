@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Small_E_Commerce.WebApi.props" />
+</Project>

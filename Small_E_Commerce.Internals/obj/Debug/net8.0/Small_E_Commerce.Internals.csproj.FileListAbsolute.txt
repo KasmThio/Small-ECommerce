@@ -1,0 +1,14 @@
+/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Internals/bin/Debug/net8.0/Small_E_Commerce.Internals.deps.json
+/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Internals/bin/Debug/net8.0/Small_E_Commerce.Internals.dll
+/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Internals/bin/Debug/net8.0/Small_E_Commerce.Internals.pdb
+/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Internals/obj/Debug/net8.0/Small_E_Commerce.Internals.csproj.AssemblyReference.cache
+/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Internals/obj/Debug/net8.0/Small_E_Commerce.Internals.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Internals/obj/Debug/net8.0/Small_E_Commerce.Internals.AssemblyInfoInputs.cache
+/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Internals/obj/Debug/net8.0/Small_E_Commerce.Internals.AssemblyInfo.cs
+/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Internals/obj/Debug/net8.0/Small_E_Commerce.Internals.csproj.CoreCompileInputs.cache
+/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Internals/obj/Debug/net8.0/Small_E_Commerce.Internals.dll
+/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Internals/obj/Debug/net8.0/refint/Small_E_Commerce.Internals.dll
+/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Internals/obj/Debug/net8.0/Small_E_Commerce.Internals.pdb
+/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Internals/obj/Debug/net8.0/ref/Small_E_Commerce.Internals.dll
+/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Internals/bin/Debug/net8.0/Small_E_Commerce.Internals.runtimeconfig.json
+/Users/kasmtj/RiderProjects/Small_E_Commerce/Small_E_Commerce.Internals/obj/Debug/net8.0/Small_E_Commerce.Internals.genruntimeconfig.cache
